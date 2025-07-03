@@ -1,0 +1,134 @@
+Trion Programming Language – Syntax Reference Guide (v0.02)
+
+Welcome to Trion! This file outlines the full syntax you'll use when writing Trion code.
+
+────────────────────────────────────
+▶ VARIABLES & TYPES
+
+let x = 10;
+let name = "Trion";
+let isActive = true;
+
+Supported types:
+- Integer: 42
+- Float: 3.14
+- Boolean: true / false
+- String: "text"
+- Array: [1, 2, 3]
+- Map/Object: { key: value }
+
+────────────────────────────────────
+▶ FUNCTIONS
+
+fn greet(name) {
+  print("Hello, " + name);
+}
+
+fn add(a, b): Int {
+  return a + b;
+}
+
+Functions can:
+- Have parameters with optional type hints
+- Return values explicitly or implicitly
+- Be nested inside modules
+
+────────────────────────────────────
+▶ CONDITIONALS
+
+if x > 5 {
+  print("Greater than 5");
+} else {
+  print("5 or less");
+}
+
+Support for:
+- if / else
+- match statements (coming soon?)
+- ternary-like expressions (planned)
+
+────────────────────────────────────
+▶ LOOPS
+
+while x < 10 {
+  x = x + 1;
+}
+
+for item in array {
+  print(item);
+}
+
+────────────────────────────────────
+▶ MODULE SYSTEM
+
+import math;
+import utils/logger;
+
+Modules are:
+- File-based or standard
+- Support namespacing
+- Load dynamically in Trion’s runtime
+
+────────────────────────────────────
+▶ COMMENTS
+
+// This is a single-line comment
+
+/*
+ This is a multi-line comment.
+ Can be used for large explanations.
+*/
+
+────────────────────────────────────
+▶ OPERATORS
+
+Arithmetic: + - * / %
+Logical: && || !
+Comparison: == != > < >= <=
+Assignment: = += -= *= /=
+
+────────────────────────────────────
+▶ BUILT-IN FUNCTIONS (Early Set)
+
+- print("Hello")
+- len(array)
+- typeOf(value)
+- toString(value)
+
+────────────────────────────────────
+▶ ADVANCED (Planned or Experimental)
+
+- Pattern matching
+- Traits / interfaces
+- async / await
+- Command-line flags (`triax build`, `triax run`)
+- Platform targeting via directives
+
+────────────────────────────────────
+▶ CLI Usage
+
+Compile a file:
+
+    triax hello.tr
+
+Run directly:
+
+    triax run hello.tr
+
+Format:
+
+    triax fmt hello.tr
+
+Generate docs:
+
+    triax doc hello.tr
+
+────────────────────────────────────
+▶ Learning Resources
+
+- README.md → Intro & setup
+- docs/ folder → Examples, patterns
+- completions/ → Shell integration
+
+────────────────────────────────────
+Have fun exploring Trion. Its goal is to be as extensible and lightweight as possible — and you’re one of its founding developers.
