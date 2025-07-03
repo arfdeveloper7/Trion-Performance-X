@@ -1,0 +1,16 @@
+package]
+name = "triax"
+version = "0.0.2"
+description = "Trion Runtime Engine"
+edition = "2024"
+authors = ["D <arfdeveloper7@gmail.com>"]
+license = "MIT"
+
+[package.metadata.trion]
+display_version = "v0.02"
+parent = "v0.1"
+stage = "alpha"
+build = 3
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55.0"
